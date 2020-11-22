@@ -32,5 +32,3 @@ resource "cloudflare_record" "a" {
   type = "CNAME"
   proxied = false
 }
-
-# TODO: www.

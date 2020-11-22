@@ -17,12 +17,30 @@ terraform plan -var-file=prod.tfvars
 terraform apply -var-file=prod.tfvars
 ```
 
+## Overview
+
+* cache_invalidation/
+  * Contains the (Lambda) code to execute cache invalidation on our CDN (CloudFront) when files on our origin (S3 bucket) change
+* site/
+  * Contains the site
+* terraform/
+  * Contains all Terraform related things
+* terraform/origin.tf
+  * Handles setting up the origin (S3 bucket) and upload of the site
+* terraform/cdn.tf
+  * Handles serving the origins's content via our CDN (CloudFront)
+* terraform/dns.tf
+  * Handles pointing the DNS to the CDN (in this case, the DNS provider is Cloudflare)
+* terraform/cache_invalidation.tf
+  * Sets up the cache invalidation (Lambda)
+
 ## TODO
 
 * Logging
-  * Lambda function for cache invalidation
-  * (Access logs)
+  * Execution of the cache invalidation Lambda function
+  * Maybe access logs
 * Headers
-  * CORS
   * CSP
+  * CORS
   * Endless cache (min, default, max ttl)
+* Redirect for www.

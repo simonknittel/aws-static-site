@@ -8,14 +8,14 @@ resource "aws_s3_bucket" "bucket" {
   }
 }
 
-resource "aws_s3_bucket" "redirect_bucket" {
-  bucket = "www.${local.full_domain}"
-  force_destroy = true
+# resource "aws_s3_bucket" "redirect_bucket" {
+#   bucket = "www.${local.full_domain}"
+#   force_destroy = true
 
-  website {
-    redirect_all_requests_to = local.full_domain
-  }
-}
+#   website {
+#     redirect_all_requests_to = local.full_domain
+#   }
+# }
 
 data "aws_iam_policy_document" "s3_policy" {
   statement {
