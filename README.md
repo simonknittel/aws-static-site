@@ -1,6 +1,6 @@
-# aws-static-site template
+# aws-static-site
 
-Boilerplate for Terraform to hosting a static site on AWS S3 served via CloudFront.
+Boilerplate for Terraform to host a static site on AWS S3 served via CloudFront.
 
 ## Setup
 
@@ -32,7 +32,7 @@ terraform apply -var-file=prod.tfvars
 * terraform/dns.tf
   * Handles pointing the DNS to the CDN (in this case, the DNS provider is Cloudflare)
 * terraform/cache_invalidation.tf
-  * Sets up the cache invalidation (Lambda)
+  * Sets up the cache invalidation via Lambda
 
 ## TODO
 
