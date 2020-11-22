@@ -47,7 +47,6 @@ data "archive_file" "cache_invalidation" {
   excludes = [
     ".gitignore",
     ".nvmrc",
-    "cache_invalidation.zip",
     "package-lock.json",
     "package.json"
   ]
