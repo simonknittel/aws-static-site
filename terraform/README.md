@@ -13,3 +13,13 @@ terraform init -backend-config=prod.hcl
 terraform plan -var-file=prod.tfvars
 terraform apply -var-file=prod.tfvars
 ```
+
+## TODO
+
+* Logging
+  * Lambda function for cache invalidation
+  * (Access logs)
+* Headers
+  * CORS
+  * CSP
+  * Endless cache (min, default, max ttl)
