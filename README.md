@@ -19,7 +19,7 @@ terraform apply -var-file=prod.tfvars
 ## Overview
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/simonknittel/aws-static-site/master/docs/architecture.svg">
+  <img src="https://raw.githubusercontent.com/simonknittel/aws-static-site/master/docs/architecture.png">
 </div>
 
 * cache_invalidation/
